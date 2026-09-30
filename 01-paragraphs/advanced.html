@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <h1>How a warehouse Management System Works</h1>
+        <br>
+        <p><em><mark>INTRODUCTION :</mark> </em></p>
+        <p>the warehouse manager is a software that helps to organize products by categories , add all the informations 
+            about the products : price, quantity, SKU, name, units .
+            All this helps to have the most efficient way to collect data about products and use it for more evolving 
+            A Warehouse Management System (WMS) is specialized software designed to optimize and coordinate all operations 
+            within a distribution facility, serving as the central nervous system of modern logistics. 
+            Rather than simply tracking stock quantities, a WMS orchestrates physical workflows—from the moment goods arrive at a facility 
+            until they are shipped to the customer.
+  
+        </p>
+        <h2>The Inventory Problem : Challenges of Manual Warehousing</h2>
+        <p>Traditional, manual, or paper-based warehouse operations create severe structural inefficiencies for supply chains : </p>
+        <p>
+           <strong>Inaccurate Inventory Tracking : </strong>Human error leads to phantom stock, misplaced products, and constant stock discrepancies.
+           <strong>Inefficient Storage Space:</strong>  Lack of structured layout logic causes poorly utilized space, leading to over- or under-stocking.
+           <strong>Slow & Faulty Order Fulfillment:</strong> Disorganized picking routes cause delays, mixed-up orders, and elevated return rates.
+        </p>
+        <h2>How the system works</h2>
+        <p>
+            <ul>
+            <li><strong>Inbound Receiving:</strong>When goods arrive, workers scan items using barcodes or RFID. The WMS logs data against expected purchase orders, checking for accuracy.</li>
+            <li><strong>Directed Put-Away:</strong>The software analyzes item parameters (e.g., volume, turnover rate, or temperature requirements) and automatically tells workers the exact shelf location to store the items.</li>
+            <li><strong>Inventory & Slotting Optimization:</strong> While in storage, the system continuously updates stock levels and monitors expiration timelines (using FIFO/FEFO rules).</li>
+            </ul>
+            
+        </p>
+        <h2>Benefits of a WMS</h2>
+        <p>
+            <ul>
+            <li><strong>99%+ Inventory Accuracy:</strong></li> Barcode and real-time tracking drastically reduce data-entry mistakes.
+            <li><strong>Up to 40% Higher Labor Efficiency:</strong></li> System-generated routes and task queuing keep floor staff continuously productive.
+            <li><strong>Faster Fulfillment Speeds:</strong></li> Order fulfillment speed frequently jumps by 25% to 50%, boosting customer retention.
+            <li><strong>Seamless Tech Integration:</strong></li> Connects directly with external.
+            </ul>
+        </p>
+        <h2>Limitation & Downsides</h2>
+        <p>
+            <p><strong>• Single-User Bottleneck: </strong> Designed as a single-user-per-session application, meaning multiple workers cannot modify inventory at the exact same moment from different stations.</p>
+            <p><strong>• Device-Bound Data:</strong>• Because data is stored in a local SQLite file instead of a centralized cloud network, it is difficult to sync across multiple separate warehouse facilities automatically.</p>
+            <p><strong>• Python Dependency for Reports:</strong>  While the core app runs standalone, generating Excel sheets or PDFs requires an optional Python installation on the machine.</p>
+            <p><strong>• Hardware Loss Risk:</strong> If the physical desktop computer encounters critical hardware failure or theft, the database could be lost unless external manual backups are maintained.</p>
+        </p>
+        <h2>Conclusion</h2>
+        <p>
+          SmartStock Warehouse Manager provides a secure, efficient solution for small-to-medium 
+          logistics setups needing tight control over stock movement without cloud-based complexity. 
+          By blending an embedded local database, strict dual-audit tracking, and high-performance 
+          native design, it delivers robust operational stability tailored perfectly for direct localized deployments.
+       </p>
+
+
+    </article>
+</body>
+</html>
