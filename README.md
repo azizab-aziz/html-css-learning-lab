@@ -9,7 +9,7 @@ and an advanced one (structure, semantics, accessibility).
 - [02 — Links](./02-links)
 - [03 — Lists](./03-lists)
 - [04 — Images](./04-images)
-- 05 — Semantic tags *(coming soon)*
+- [05 — Semantic-tags](./05-semantic-tags)
 - 06 — Tables *(coming soon)*
 - 07 — Forms *(coming soon)*
 - 08 — Mini-page *(coming soon)*
