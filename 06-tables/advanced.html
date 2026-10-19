@@ -1,106 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Inventory Report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Inventory Report</title>
 </head>
 <body>
-    
-    <header>
-        <h1>Monthly Inventor Report</h1>
-        <p>Reporting period: <time datetime="2026-09">September 2026</time>. Stock, Value and reorder status for every product, grouped by category.</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>Inventory by category</h2>
+  <header>
+    <h1>Monthly Inventory Report</h1>
+    <p>Reporting period: <time datetime="2026-09">September 2026</time>. Stock, value, and reorder status for every product, grouped by category.</p>
+  </header>
 
-            <table>
-                <caption>Monthly inventory report, September 2026: quantity, value, and reorder status by category</caption>
+  <main>
 
-                <thead>
-                    <tr>
-                        <th scope="col">Product</th>
-                        <th scope="col"><abbr title="Stock Keeping Unit">SKU</abbr></th>
-                        <th scope="col">Quantity (units)</th>
-                        <th scope="col">Unit price (TND)</th>
-                        <th scope="col">Stock value (TND)</th>
-                        <th scope="col">Reorder level (units)</th>
-                        <th scope="col">Reorder status</th>
-                    </tr>
-                </thead>
-                    
-                
-            </table>
+    <section>
+      <h2>Inventory by category</h2>
 
-                <tbody>
-                  <tr>
-                   <th scope="rowgroup" colspan="7">Electronics</th>
-                  </tr>
-                  <tr>
-                   <th scope="row">Business Laptop</th>
-                   <td>LAP-001</td>
-                   <td>12</td>
-                   <td>1,800</td>
-                   <td>21,600</td>
-                   <td>5</td>
-                   <td>OK</td>
-                  </tr>
-                  <tr>
-                   <th scope="row">Widescreen Monitor</th>
-                   <td>MON-001</td>
-                   <td>8</td>
-                   <td>450</td>
-                   <td>3,600</td>
-                   <td>10</td>
-                   <td>Reorder</td>
-                 </tr>
-                 <tr>
-                  <th scope="row">Wireless Barcode Scanner</th>
-                  <td>SCN-001</td>
-                  <td>24</td>
-                  <td>320</td>
-                  <td>7,680</td>
-                  <td>10</td>
-                  <td>OK</td>
-                 </tr>
-                </tbody>
+      <table>
+        <caption>Monthly inventory report, September 2026: quantity, value, and reorder status by category</caption>
 
-                <tbody>
-                  <tr>
-                     <th scope="rowgroup" colspan="7">Office supplies</th>
-                  </tr>
-                  <tr>
-                     <th scope="row">Wired Keyboard</th>
-                     <td>KBD-001</td>
-                     <td>3</td>
-                     <td>60</td>
-                     <td>180</td>
-                     <td>10</td>
-                     <td>Reorder</td>
-                 </tr>
-                 <tr>
-                     <th scope="row">Wireless Mouse</th>
-                     <td>MSE-001</td>
-                     <td>0</td>
-                     <td>45</td>
-                     <td>0</td>
-                     <td>10</td>
-                     <td>Out of stock</td>
-                 </tr>
-                 <tr>
-                     <th scope="row">Printer Paper Box</th>
-                     <td>PPR-001</td>
-                     <td>40</td>
-                     <td>25</td>
-                     <td>1,000</td>
-                     <td>20</td>
-                     <td>OK</td>
-                 </tr>
-                </tbody>
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col"><abbr title="Stock Keeping Unit">SKU</abbr></th>
+            <th scope="col">Quantity (units)</th>
+            <th scope="col">Unit price (TND)</th>
+            <th scope="col">Stock value (TND)</th>
+            <th scope="col">Reorder level (units)</th>
+            <th scope="col">Reorder status</th>
+          </tr>
+        </thead>
 
-                 <tbody>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" colspan="7">Electronics</th>
+          </tr>
+          <tr>
+            <th scope="row">Business Laptop</th>
+            <td>LAP-001</td>
+            <td>12</td>
+            <td>1,800</td>
+            <td>21,600</td>
+            <td>5</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <th scope="row">Widescreen Monitor</th>
+            <td>MON-001</td>
+            <td>8</td>
+            <td>450</td>
+            <td>3,600</td>
+            <td>10</td>
+            <td>Reorder</td>
+          </tr>
+          <tr>
+            <th scope="row">Wireless Barcode Scanner</th>
+            <td>SCN-001</td>
+            <td>24</td>
+            <td>320</td>
+            <td>7,680</td>
+            <td>10</td>
+            <td>OK</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="rowgroup" colspan="7">Office supplies</th>
+          </tr>
+          <tr>
+            <th scope="row">Wired Keyboard</th>
+            <td>KBD-001</td>
+            <td>3</td>
+            <td>60</td>
+            <td>180</td>
+            <td>10</td>
+            <td>Reorder</td>
+          </tr>
+          <tr>
+            <th scope="row">Wireless Mouse</th>
+            <td>MSE-001</td>
+            <td>0</td>
+            <td>45</td>
+            <td>0</td>
+            <td>10</td>
+            <td>Out of stock</td>
+          </tr>
+          <tr>
+            <th scope="row">Printer Paper Box</th>
+            <td>PPR-001</td>
+            <td>40</td>
+            <td>25</td>
+            <td>1,000</td>
+            <td>20</td>
+            <td>OK</td>
+          </tr>
+        </tbody>
+
+        <tbody>
           <tr>
             <th scope="rowgroup" colspan="7">Storage equipment</th>
           </tr>
@@ -150,10 +148,9 @@
           </tr>
         </tfoot>
       </table>
-    
-        </section>
+    </section>
 
-        <section>
+    <section>
       <h2>Notes and abbreviations</h2>
       <dl>
         <dt>SKU</dt>
@@ -172,12 +169,12 @@
         <dd>"OK" means the quantity is at or above the reorder level. "Reorder" means it is below. "Out of stock" means the quantity is 0.</dd>
       </dl>
     </section>
-    </main>
 
-    <footer>
-        <p>Create for HTML practice.</p>
-    </footer>
+  </main>
 
-    
+  <footer>
+    <p>Created for HTML practice.</p>
+  </footer>
+
 </body>
 </html>
