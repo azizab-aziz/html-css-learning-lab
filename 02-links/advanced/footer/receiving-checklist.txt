@@ -1,0 +1,7 @@
+Receiving checklist
+
+[ ] Scan the incoming item's barcode
+[ ] Check the quantity against the purchase order
+[ ] Inspect for damage
+[ ] Assign a shelf location
+[ ] Update the stock count in the system
