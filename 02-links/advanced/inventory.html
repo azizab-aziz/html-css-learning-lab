@@ -7,6 +7,8 @@
 </head>
 <body id="top">
 
+  <a href="#main-content">Skip to main content</a>
+
   <nav aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -17,16 +19,34 @@
     </ul>
   </nav>
 
-  <h1>Inventory</h1>
-  <p>This section tracks current stock levels across the warehouse.</p>
-  <p>New stock enters the system through the <a href="receiving.html">Receiving page</a>.</p>
-  <p>See the full catalog on the <a href="products.html">Products page</a>.</p>
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Inventory</li>
+    </ol>
+  </nav>
 
-  <p>Learn more on <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>.</p>
-  <p>View the source on <a href="https://github.com/YOUR-USERNAME/html-css-learning-lab" target="_blank" rel="noopener">GitHub</a>.</p>
-  <p><a href="contact.html">Contact the warehouse team</a></p>
-  <p><a href="#top">Back to top</a></p>
+  <main id="main-content">
 
+
+    <h1>Inventory</h1>
+    <p>This section tracks current stock levels across the warehouse.</p>
+    <p>New stock enters the system through the <a href="receiving.html">Receiving page</a>.</p>
+    <p>See the full catalog on the <a href="products.html">Products page</a>.</p>
+
+    <section id="low-stock">
+      <h2>Low stock</h2>
+      <P>Products below their reorder level  are flagged so new stock can be ordered in time.</P>
+    </section>
+
+    <p>Learn more on <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>.</p>
+    <p>View the source on <a href="https://github.com/YOUR-USERNAME/html-css-learning-lab" target="_blank" rel="noopener">GitHub</a>.</p>
+    <p><a href="contact.html">Contact the warehouse team</a></p>
+    <p><a href="#top">Back to top</a></p>
+
+  </main>
+
+  
   <nav>
     <a href="#main-content">Skip to the main content</a>
   </nav>
