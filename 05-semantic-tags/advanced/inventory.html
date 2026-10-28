@@ -23,8 +23,8 @@
 
   <main>
 
-    <section>
-      <h2>Tracking stock</h2>
+    <section aria-labelledby="tracking-title">
+      <h2 id="tracking-title">Tracking stock</h2>
 
       <article>
         <h3>Stock levels</h3>
@@ -37,9 +37,27 @@
       </article>
     </section>
 
-    <section>
-      <h2>Keeping data accurate</h2>
+    <section aria-labelledby="accuracy-title">
+      <h2 id="acciracy-title">Keeping data accurate</h2>
       <p>Accurate records depend on updating the system after every movement. A scan at pickup and a scan at drop-off keeps each item's location correct.</p>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+
+      <details>
+        <summary>what is a reorder threshold?</summary>
+        <p>The quantity at which a product should be ordered again.Below it, the system shows an alert.</p>
+      </details>
+
+      <details>
+        <summary>How often should I update the stock count?</summary>
+        <p>After every movement, so the system always matches what is on the shelf.</p>
+      </details>
+      <details>
+        <summary>What if the count on the shelf does not match the system?</summary>
+        <p>Tell your supervisor and recount the item. Do not edit the number without checking it first.</p>
+      </details>
     </section>
 
     <aside>
@@ -50,7 +68,7 @@
   </main>
 
   <footer>
-    <p>Created for HTML practice.</p>
+    <p><small>Created for HTML practice.</small></p>
   </footer>
 
 </body>
