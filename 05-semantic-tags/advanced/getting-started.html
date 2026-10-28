@@ -23,12 +23,19 @@
 
   <main>
 
-    <section>
-      <h2>Before you begin</h2>
+    <section aria-labelledby="before-title">
+      <h2 id="before-title">Before you begin</h2>
 
       <article>
-        <h3>What you need</h3>
+        <header>
+          <h3>What you need</h3>
+          <p>Reviewed on <time datetime="2026-10-20">20 October 2026</time></p>                               
+        </header>
+        
         <p>A workstation with the system installed, a barcode scanner, and your staff account details.</p>
+        <footer>
+          <p>Written by the receiving team.</p>
+        </footer>
       </article>
 
       <article>
@@ -37,8 +44,8 @@
       </article>
     </section>
 
-    <section>
-      <h2>Your first delivery</h2>
+    <section aria-labelledby="delivery-title">
+      <h2 id="delivery-title">Your first delivery</h2>
       <ol>
         <li>Scan the barcode on the incoming item</li>
         <li>Check the quantity against the purchase order</li>
@@ -55,7 +62,7 @@
   </main>
 
   <footer>
-    <p>Created for HTML practice.</p>
+    <p><small>Created for HTML practice.</small></p>
   </footer>
 
 </body>
