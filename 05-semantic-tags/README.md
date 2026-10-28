@@ -14,13 +14,13 @@ and asides instead of generic containers. Theme: the **Warehouse Management Lear
 
 | Tag | Meaning | Used for |
 |---|---|---|
-| `<header>` | Introductory content | The page title and one-line intro |
+| `<header>` | Introductory content | The page title and intro, or the byline of an article |
 | `<nav>` | Navigation links | The main menu |
 | `<main>` | The central content | Once per page |
 | `<section>` | A themed group of content, with a heading | "Featured story", "Tracking stock" |
 | `<article>` | A self-contained piece | A news story, a guide topic |
 | `<aside>` | Related but non-essential content | Tips and side notes |
-| `<footer>` | Closing information | The credit line |
+| `<footer>` | Closing information | The credit line, or the end of an article |
 
 **Section or article?** If the piece would still make sense copied to another website, it is an `<article>`. If it is a themed chunk of this page, it is a `<section>`.
 
@@ -38,7 +38,7 @@ and asides instead of generic containers. Theme: the **Warehouse Management Lear
 
 ## Advanced version: documentation site
 
-**Goal:** build several pages that share one semantic skeleton.
+**Goal:** build several pages that share one semantic skeleton, and go beyond the seven core tags.
 
 ```
 advanced/
@@ -50,7 +50,7 @@ advanced/
 
 Every page contains:
 
-- One `<header>`
+- One page-level `<header>`
 - A `<nav aria-label="Main navigation">` that is identical on all pages, with `aria-current="page"` on the current page's link
 - One `<main>` with multiple `<section>` blocks
 - `<article>` elements for independent pieces of content
@@ -58,12 +58,24 @@ Every page contains:
 - A `<footer>`
 - A heading hierarchy with no skipped levels
 
+Extra semantic elements added:
+
+| Element | Where | What it does |
+|---|---|---|
+| `<time datetime="...">` | `index`, `getting-started` | Marks a date in a form software can read |
+| `<header>` and `<footer>` inside an `<article>` | `getting-started` | Introduces and closes one article, not the whole page |
+| `aria-labelledby` on `<section>` | Every page | Names the section using its own heading, so it becomes a named region |
+| `<address>` | `contact` | Marks contact information for the page owner |
+| `<details>` and `<summary>` | `inventory` | A FAQ that expands and collapses with no CSS or JavaScript |
+| `<small>` | Every footer | Marks fine print such as the credit line |
+
 ## What improved from intermediate to advanced
 
 - **Scale:** from one page to four pages that follow the same structure
 - **Consistency:** the same skeleton and navigation make separate files feel like one site
 - **Decisions:** each page needed real choices about what is a section, an article, or an aside
-- **Accessibility:** landmarks let screen reader users jump between header, navigation, main content, aside, and footer
+- **Accessibility:** landmarks and named sections let screen reader users jump around the page
+- **Precision:** `<time>`, `<address>`, and `<details>` say exactly what a piece of content is
 - **Connection:** the pages link to the operations manual from topic 03
 
 ## What I learned
@@ -72,14 +84,18 @@ Every page contains:
 - A page has exactly one `<main>`
 - A `<section>` should start with a heading. If it has no natural heading, it is probably the wrong tag.
 - `<aside>` holds content the page still works without
+- `<header>` and `<footer>` introduce and close their **parent**, so they can also sit inside an `<article>`
+- `aria-labelledby` points to a heading's `id`, and the two must match exactly
+- `<small>` means fine print, not "make this smaller"
 - Heading levels follow the structure: `<h1>`, then `<h2>`, then `<h3>`, with no skipping
 - Landmarks are not decoration. They are how assistive technology navigates a page.
-- Use a generic `<div>` only when no semantic element fits
+- Not every project needs all seven tags. Use a tag only when the content has that meaning.
 
 ## Known issues / next improvements
 
 - [ ] Check that the home page aside link opens the operations manual from topic 03
 - [ ] Confirm the correct `aria-current="page"` link on each page using View Source
-- [ ] Replace the placeholder stories and guide text with content written for a real reader
+- [ ] Check that every `aria-labelledby` matches a heading `id` on its page
+- [ ] Replace the placeholder text with content written for a real reader
 - [ ] Add a real contact form in topic 07
 - [ ] Add CSS later to lay out the header, navigation, main area, and aside
