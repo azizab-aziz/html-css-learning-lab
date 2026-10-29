@@ -1,13 +1,13 @@
 table, tr, th, td, caption{
-    border: 1px solid #eee;
+    border: 1px solid #080101;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     padding: 0.5rem;
 }
 
 body{
-    background-color: #333;
-    color: #eee;
+    background-color: #ddd9d9;
+    color: #070000;
     font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
 }

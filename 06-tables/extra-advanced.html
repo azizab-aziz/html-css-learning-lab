@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Tables - Extra Advanced</title>
+    <link rel="stylesheet" href="extra-advanced.css">
+</head>
+<body>
+
+    <header>
+        <h1>Warehouse Operation Tables</h1>
+        <p>Four tables showing how a warehouse plans its day, its people, its deliveries, and its space.</p>
+    </header>
+
+
+    <main>
+
+       <section>
+        <h2>Daily schedule</h2>
+        <table>
+            <caption>Warehouse daily schedules</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Morning</th>
+                    <td>
+                        <time datetime="06:00">6AM</time>-<time datetime="10:00">10AM</time>
+                    </td>
+                    <td>Receive deliveries</td>
+                </tr>
+                <tr>
+                    <th scope="row">Break</th>
+                    <td>
+                        <time datetime="10:00">10AM</time>-<time datetime="11:00">11AM</time>
+                    </td>
+                    <td>Lunch Break</td>
+                </tr>
+                <tr>
+                    <th scope="row">AfterNoon</th>
+                    <td>
+                        <time datetime="11:00">11AM</time>-<time datetime="15:00">3PM</time>
+                    </td>
+                    <td>Move stock to shelves</td>
+                </tr>
+                <tr>
+                    <th scope="row">Late afternoon</th>
+                    <td>
+                        <time datetime="15:00">3PM</time>-<time datetime="17:00">17PM</time>
+                    </td>
+                    <td>Pick and pack orders</td>
+                </tr>
+                <tr>
+                    <th scope="row">Evening</th>
+                    <td rowspan="2">All other times</td>
+                    <td>Warehouse closed</td>
+                </tr>
+                <tr>
+                    <th scope="row">Night</th>
+                    <td>Security checks only</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">This schedule applies Monday to Friday. Weekends follow a reduced rota.</td>
+                </tr>
+            </tfoot>
+        </table>
+       </section>
+
+       
+
+    </main>
+    
+</body>
+</html>
