@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Inventory Item</title>
 </head>
 <body>
     
+    <header>
+        <h1>Add Inventory Item</h1>
+        <p>Register a new product in the warehouse system. Fields marked "required" must be filled in before saving.</p>
+    </header>
+
+    <main>
+
+        <form action="#" method="get" aria-labelledby="form-title">
+            <h2 id="form-title">New product details</h2>
+
+            <fieldset>
+                <legend>Product information</legend>
+
+                <div>
+                    <label for="product-name">Product name (required)</label>
+                    <input id="product-name" name="product-name" type="text" maxlength="80" required />
+                </div>
+
+                <div>
+                    <label for="sku">SKU (required)</label>
+                    <input
+                       id="sku"
+                       name="sku"
+                       type="text"
+                       pattern="[A-Z]{3}-[0-9]{3}"
+                       pattern="[A-Z]{3}-[0-9]{3}"
+                       title="Three capital letters, a hyphen, and three digits, for example SCN-001"
+                       placeholder="SCN-001"
+                       aria-describedby="sku-hint"
+                       required
+                    />
+                    <small id="sku-hint">Three capital letters, a hyphen, three digits.</small>
+                </div>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
