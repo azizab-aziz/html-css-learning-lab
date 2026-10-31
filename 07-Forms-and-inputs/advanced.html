@@ -96,6 +96,26 @@
                     <small id="location-hint">One capital letter, a hyphen, two digits, for example A-01.</small>
                 </div>
             </fieldset>
+
+            <fieldset>
+                <legend>Purchase details</legend>
+
+                <di>
+                    <label for="supplier">supplier (required)</label>
+                    <input id="supplier" name="supplier" type="text" list="supplier-list" maxlength="80" required />
+                    <datalist id="supplier-list">
+                        <option value="TechSupply Co."></option>
+                        <option value="OfficiMart"></option>
+                    </datalist>
+                </di>
+
+                <div>
+                    <label for="product-date">Purchase date (required)</label>
+                    <input id="purchase-date" name="purchase-date" type="date"required />
+                </div>
+            </fieldset>
+
+            
         </form>
     </main>
 </body>
