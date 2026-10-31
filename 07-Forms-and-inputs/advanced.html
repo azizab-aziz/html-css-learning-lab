@@ -61,7 +61,39 @@
                 </div>
 
                 <div>
-                    
+                    <label for="description">product description (optional)</label>
+                    <textarea id="description" name="description" rows="4" maxlength="500" aria-describedby="description-hint"></textarea>
+                    <small id="description-hint">Up to 500 characters.</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Stock and location</legend>
+
+
+                <div>
+                    <label for="quantity">Quantity in stock (required)</label>
+                    <input id="quantity" name="quantity" type="number" min="0" step="1" required />
+                </div>
+
+                <di>
+                    <label for="recorder">Record threshold (required)</label>
+                    <input id="Record" name="record" type="number" min="0" step="1" aria-describedby="recorder-hint" required />
+                    <small id="recorder-hint">The quantity at witch product should be ordered again.</small>
+                </di>
+
+                <div>
+                    <label for="location">Warehouse location (required)</label>
+                    <input
+                      id="location"
+                      name="location"
+                      type="text"
+                      pattern="[A-Z]-[0-9]{2}"
+                      title="One capital letter, a hyphen, and two digits, for example A-01"
+                      aria-describedby="location-hint"
+                      required
+                      />
+                    <small id="location-hint">One capital letter, a hyphen, two digits, for example A-01.</small>
                 </div>
             </fieldset>
         </form>
