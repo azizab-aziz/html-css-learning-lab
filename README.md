@@ -11,5 +11,5 @@ and an advanced one (structure, semantics, accessibility).
 - [04 — Images](./04-images)
 - [05 — Semantic-tags](./05-semantic-tags)
 - [06 — Tables](./06-tables)
-- 07 — Forms *(coming soon)*
+- [07 — Forms-and-inputs](./07-Forms-and-inputs)
 - 08 — Mini-page *(coming soon)*
