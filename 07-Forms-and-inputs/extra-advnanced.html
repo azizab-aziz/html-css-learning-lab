@@ -41,7 +41,44 @@
                     />
                     <small id="po-hint">The letters PO, a hyphen, four digits, for example PO-2041.</small>    
                 </div> 
+
+                <div>
+                    <label for="supplier-site">Supplier website (option)</label>
+                    <input id="supplier-site" name="supplier-site" type="url" aria-describedby="site-hint" />
+                    <small id="site-hint">Include the start of the address, for example https://example.com.</small>
+                </div>
             </fieldset>
+
+             <fieldset>
+                 <legend>Arrival</legend>
+
+                 <div>
+                     <label for="arrival">Arrival date and time (required)</label>
+                     <input id="arrival" name="arrival" type="datetime-local" required />
+                </div>
+
+                 <div>
+                     <label for="unload-time">Unloading start time (required)</label>
+                     <input id="unload-time" name="unload-time" type="time" min="06:00" max="18:00" aria-describedby="unload-hint" required />
+                     <small id="unload-hint">The dock is open from 06:00 to 18:00.</small>
+                </div>
+
+                <div>
+                     <label for="seal">Container seal number (required)</label>
+                     <input
+                         id="seal"
+                         name="seal"
+                         type="text"
+                         inputmode="numeric"
+                         pattern="[0-9]{6}"
+                         maxlength="6"
+                         title="Exactly six digits, for example 004821"
+                         aria-describedby="seal-hint"
+                         equired
+                     />
+                    <small id="seal-hint">Six digits. Leading zeros count, for example 004821.</small>
+                    </div>
+                    </fieldset>
             
         </form>
     </main>
