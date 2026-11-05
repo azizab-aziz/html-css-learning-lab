@@ -11,7 +11,9 @@ Theme: the **Warehouse Management Learning Lab**.
 | `intermediate.html` | Intermediate | An inventory table with six products |
 | `advanced.html` | Advanced | A monthly inventory report grouped by category, with totals |
 | `extra-advanced.html` | Extra advanced | Four warehouse tables on one page, styled by its own stylesheet |
-| `extra-advanced.css` | Extra advanced | The only stylesheet in the repo so far: borders, font, and padding for the tables |
+| `extra-advanced.css` | Extra advanced | A dark-theme stylesheet: borders, font, and padding for the tables |
+| `schedule.html` | Own exercise | Two exam timetables (weeks 1 and 2), outside the warehouse theme |
+| `schedule.css` | Own exercise | A light-theme stylesheet for the schedule page |
 
 ## When to use a table
 
@@ -57,7 +59,7 @@ The report logic:
 
 **Goal:** practice several table shapes on one page, and see tables with borders for the first time.
 
-**A deliberate exception:** the plan is HTML first and CSS later. This one page is linked to its own file, `extra-advanced.css`, so the tables can be seen with borders. No other page in the repo uses CSS yet.
+**A deliberate exception:** the plan is HTML first and CSS later. This page is linked to its own file, `extra-advanced.css`, so the tables can be seen with borders. Only the pages in this topic that have their own stylesheet use CSS so far.
 
 The stylesheet gives every table part a light border, a monospace font, collapsed borders, and padding. A few small rules were added for a dark page background and spacing between tables.
 
@@ -69,6 +71,24 @@ The stylesheet gives every table part a light border, a monospace font, collapse
 | 4 | Shelf zone capacity | Numbers that add up, with a total row in `<tfoot>` |
 
 Elements used on the page: `<table>`, `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, `<tr>`, `<th>`, `<th scope="col">`, `<th scope="row">`, `<td>`, `<time>`, and `&nbsp;`.
+
+## Own exercise: exam schedule
+
+**Goal:** apply the table skills to real data that has nothing to do with the warehouse: a two-week exam timetable.
+
+**Another deliberate exception:** like the extra-advanced page, this page is linked to its own stylesheet, `schedule.css`. It uses a light page (`#ddd9d9` background, near-black text and borders), where `extra-advanced.css` uses a dark one.
+
+| Table | Content | What it practices |
+|---|---|---|
+| 1 | Week 1 exams: Monday, Tuesday, Wednesday, Friday | `<time>` pairs for time ranges, the day as `<th scope="row">`, and a `<tfoot>` note with `colspan="3"` |
+| 2 | Week 2 exams | `rowspan="2"` on a row header: Tuesday has two exams, so its day cell covers both rows |
+
+How the page is built:
+
+- Each table sits in its own `<section>` with an `<h2>`
+- Every table has a `<caption>`, a `<thead>` with three columns (Day, Time, Exam), a `<tbody>`, and a `<tfoot>`
+- The page has a `<header>` and a `<main>`
+- In table 2, the second Tuesday row has only two cells, because the day header reaches down from the row above. Every row still adds up to three columns.
 
 ## What improved from intermediate to advanced
 
@@ -85,26 +105,7 @@ Elements used on the page: `<table>`, `<caption>`, `<thead>`, `<tbody>`, `<tfoot
 - **Seeing the structure:** borders make rows, columns, and merged cells visible, so mistakes show up quickly
 - **Time and totals:** times use `<time>`, and each footer row carries a total or a note
 
-## What I learned
+## What the exam schedule added
 
-- A `<caption>` belongs to the table, so assistive technology announces it with the data
-- `scope` links each data cell to its headers
-- Row headers are `<th>`, not `<td>`, when they identify the row
-- A table can have several `<tbody>` groups, and one `<tfoot>`
-- `colspan` merges cells across columns, and `rowspan` merges them down rows. Every row must still add up to the same number of columns.
-- A missing or extra cell shifts the rest of that row out of line with the headers
-- `&nbsp;` is a non-breaking space. It fills an empty cell so the cell exists but shows nothing.
-- `<time datetime="17:00">` needs a valid time. "17PM" is not valid, so write `5PM` or `17:00`.
-- A typo like `</th>` written as `/th>` prints as visible text, so the broken tag shows up on the page
-- A table with no CSS has no borders. It still has to make sense without them.
-- In CSS, `border-collapse` only applies to `table`, so the other selectors in the same rule ignore it
-- Status shown only by color is invisible to some readers, so write it as words too
-
-## Known issues / next improvements
-
-- [ ] Add borders, spacing, and alignment to the other two table pages when CSS starts
-- [ ] Right-align the number columns with CSS
-- [ ] Recalculate the totals if any quantity or price is changed
-- [ ] Check that every row in each table adds up to the right number of columns
-- [ ] Wrap the tables so they scroll sideways on small screens (CSS)
-- [ ] Move the shared table rules into `assets/css/style.css` when the CSS topics start
+- **Different subject:** the same table structure works for any data with rows and columns, not only inventory
+- **`rowspan` on a row header:** one `<th scope="row" rowspan="2">` covers two rows, where earlier `rowspan` was
