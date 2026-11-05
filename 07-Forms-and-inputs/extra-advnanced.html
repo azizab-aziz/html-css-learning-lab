@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Check-in</title>
+</head>
+<body>
+
+    <header>
+        <h1>Delivery check-in</h1>
+        <p>Record what arrived at the dock, in what condition, and who needs to know. fields marked "required" must be filled in before submitting. a Draft can be saved with fields missing.</p>
+    </header>
+
+    <main>
+
+        <form action="#" method="get" aria-labelledby="chekin-title">
+            <h2 id="chekin-title">New delivery</h2>
+
+            <input type="hidden" name="form-version" value="1" />
+
+            <fieldset>
+                <legend>Delivery reference</legend>
+
+                <div>
+                    <label for="delivery">Delivery number (filled in automatically)</label>
+                    <input id="delivery" name="delivery" type="text" value="DLV-104" readonly />
+                </div>
+
+                <div>
+                    <label for="purchase-order">Find purchase order (required)</label>
+                    <input
+                        id="purchase-order"
+                        name="purchase-order"
+                        type="search"
+                        pattern="PO-[0-9]{4}"
+                        title="The letters PO, a hyphen, four digits for example PO-2041"
+                        autocomplete="off"
+                        aria-describedby="po-hint"
+                        required
+                    />
+                    <small id="po-hint">The letters PO, a hyphen, four digits, for example PO-2041.</small>    
+                </div> 
+            </fieldset>
+            
+        </form>
+    </main>
+    
+</body>
+</html>
