@@ -77,8 +77,49 @@
                          equired
                      />
                     <small id="seal-hint">Six digits. Leading zeros count, for example 004821.</small>
-                    </div>
-                    </fieldset>
+                </div>
+                </fieldset>
+
+                <fieldset>
+        <legend>Goods received</legend>
+
+        <div>
+          <label for="pallets">Pallets received (required)</label>
+          <input id="pallets" name="pallets" type="number" min="0" max="40" step="1" required />
+        </div>
+
+        <div>
+          <label for="temperature">Cargo temperature in °C (optional)</label>
+          <input id="temperature" name="temperature" type="number" min="-30" max="30" step="0.1" aria-describedby="temperature-hint" />
+          <small id="temperature-hint">Only for temperature-controlled goods. One decimal place, for example 4.5.</small>
+        </div>
+
+        <div>
+          <label for="packaging">Packaging condition (1 to 5)</label>
+          <input
+            id="packaging"
+            name="packaging"
+            type="range"
+            min="1"
+            max="5"
+            step="1"
+            value="3"
+            list="packaging-marks"
+            aria-describedby="packaging-hint"
+          />
+          <datalist id="packaging-marks">
+            <option value="1" label="Poor"></option>
+            <option value="2" label="Weak"></option>
+            <option value="3" label="Fair"></option>
+            <option value="4" label="Good"></option>
+            <option value="5" label="Excellent"></option>
+          </datalist>
+          <small id="packaging-hint">1 is poor and 5 is excellent.</small>
+        </div>
+      </fieldset>
+
+
+
             
         </form>
     </main>
