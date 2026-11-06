@@ -118,6 +118,46 @@
         </div>
       </fieldset>
 
+      <fieldset>
+        <legend>Damage check</legend>
+
+        <p>Tick everything that applies. Leave all unticked if nothing is damaged.</p>
+
+        <div>
+          <label>
+            <input type="checkbox" name="damage" value="crushed-boxes" />
+            Crushed boxes
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="damage" value="wet-packaging" />
+            Wet packaging
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="damage" value="torn-wrap" />
+            Torn pallet wrap
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="damage" value="missing-labels" />
+            Missing labels
+          </label>
+        </div>
+
+        <div>
+          <label for="photos">Damage photos (optional)</label>
+          <input id="photos" name="photos" type="file" accept="image/*" multiple aria-describedby="photos-hint" />
+          <small id="photos-hint">You can choose several images.</small>
+        </div>
+      </fieldset>
+
 
 
             
