@@ -158,6 +158,30 @@
         </div>
       </fieldset>
 
+       <fieldset>
+        <legend>Notification and notes</legend>
+
+        <div>
+          <label for="notify">Notify by email (optional)</label>
+          <input id="notify" name="notify" type="email" multiple autocomplete="off" aria-describedby="notify-hint" />
+          <small id="notify-hint">Separate several addresses with commas.</small>
+        </div>
+
+        <div>
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="4" maxlength="400" aria-describedby="notes-hint"></textarea>
+          <small id="notes-hint">Up to 400 characters.</small>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="approval" value="approved" disabled />
+            Supervisor approval (completed by a supervisor)
+          </label>
+        </div>
+      </fieldset>
+
+
 
 
             
