@@ -89,10 +89,49 @@
         </section>
 
 
-        
+        <section id="demo" aria-labelledby="demo-title">
+            <h2 id="demo-title">Request a demonstration</h2>
+            <p>Fields marked "required must be filled in before sending.</p>
+
+            <form action="#" method="get" aria-label="Demo request form">
+
+                <div>
+                    <label for="name">Full name (required)</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+
+                <div>
+                    <label for="email">Work email (required)</label>
+                    <input id="email" name="email" type="email" autocomplete="organization" required />
+                </div>
+
+                <div>
+                    <label for="company">company (required)</label>
+                    <input id="company" name="company" type="text" autocomplete="organization" required />
+                </div>
+
+                <div>
+                    <label for="demo-date">Preferred demo date (required)</label>
+                    <input id="demo-date" name="demo-date" type="date" required />
+                </div>
+
+                <div>
+                    <label for="message">Message(optional)</label>
+                    <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
+                </div>
+
+                <button type="submit">Request my demo</button>
+
+
+            </form>
+        </section>
 
 
     </main>
+
+    <footer>
+        <p><small>Created for HTML practice.</small></p>
+    </footer>
 
    
     
