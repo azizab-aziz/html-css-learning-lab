@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockFlow - Warehouse Management System</title>
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" sizes="any">
+    <link rel="stylesheet" href="advanced.css">
+</head>
 </head>
 <body>
     
@@ -87,6 +89,78 @@
                 <p>Written by the operation team. Full produces are in the<a href="../../03-lists/advanced.html">operation manual</a>.</p>
             </footer>
         </article>
+
+        <section id="inventory" aria-labelledby="inventory-title">
+            <h2 id="inventory-title">Inventory report</h2>
+            <p>A sample report, grouped by category. Every product shows its quantity, its stock value, and wether it needs reordering.</p>
+
+            <table>
+                <caption>Inventory report, November 2026: quantity, value, and reorder status by category</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col"><abbr title="stock Keeping Unit">SKU</abbr></th>
+                        <th scope="col">Quantity (units)</th>
+                        <th scope="col">Stock value (TND)</th>
+                        <th scope="col">Reorder status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" colspan="5">Electronics</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Business laptop</th>
+                        <td>LAP-001</td>
+                        <td>12</td>
+                        <td>21,600</td>
+                        <td>OK</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wireless Mouse</th>
+                        <td>MSE-001</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>Out of stock</td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Steel Shelving unit</th>
+                        <td>SHF-001</td>
+                        <td>8</td>
+                        <td>1,760</td>
+                        <td>OK</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Plastic storage Bin</th>
+                        <td>BIN-001</td>
+                        <td>90</td>
+                        <td>360</td>
+                        <td>Reorder</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Total units in stock</th>
+                        <td>137</td>
+                        <td colspan="2">All categories</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Total stock value</th>
+                        <td>31,580</td>
+                        <td>TND</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="4">Products needing reorder</th>
+                        <td>3 of 6</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
     </main>
 </body>
