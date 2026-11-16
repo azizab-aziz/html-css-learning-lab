@@ -259,11 +259,102 @@
                         </select>
                     </div>
                 </fieldset>
+
+                <fieldset>
+                    <legend>How do you track stock today? (required)</legend>
+
+                    <label>
+                        <input type="radio" name="current-system" value="paper" required />
+                        Paper or spreadsheets
+                    </label>
+
+                    <label>
+                        <input type="radio" name="current-system" value="software" />
+                        Another software
+                    </label>
+
+                    <label>
+                        <input type="radio" name="current-system" value="none" />
+                        No system yet
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What interests you most? (optional)</legend>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" name="interest" value="receiving"/>
+                            receiving
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" name="interest" value="counts" />
+                            Inventory counts
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" name="interest" value="reports" />
+                            Reports
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Demo preferences</legend>
+
+                    <div>
+                        <label for="message">anything we should know? (optional)</label>
+                        <input id="demo-date" name="demo-date" type="date" required />
+                    </div>
+
+                    <div>
+                        <label for="message">Anything we should know? (optional)</label>
+                        <textarea id="message" name="message" rows="4" maxlength="500" aria-describedby="message-hint"></textarea>
+                        <small id="message-hint">Up tp 500 characters.</small>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="consent" value="yes" required />
+                        I agree tp be contacted about this demo request (required)
+                    </label>
+                </div>
+
+                <button type="submit">Request my demo</button>
+
             </form>
         </section>
 
-
-
     </main>
+
+    <footer>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#demo">Contact</a></li>
+                <li><a href="../../02-links/advanced/index.html">Documentation</a></li>
+                <li><a href="../../03-lists/advanced.html">Operation manual</a></li>
+            </ul>
+        </nav>
+
+        <address>
+            StockFlow<br>
+            Industrial Zone, Tunis, Tunisia<br>
+            <a href="mailto:contact@warehouse-lab.com">contact@warehouse-lab.com</a><br>
+            <a href="tel:+21612345678">+216 12 345 678</a>
+        </address>
+
+
+        <p><a href="#top">Back to top</a></p>
+        <p><small>&copy; 2026 StockFlow. Created for HTML practice.</small></p>
+    </footer>
 </body>
 </html>
