@@ -196,6 +196,72 @@
         </section>
         
 
+        <section id="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Frequently asked questions</h2>
+
+            <details>
+                <summary>Do I need special hardware?</summary>
+                <p>A computer and a barcode scanner are enough to start. Label printers are optional.</p>
+            </details>
+
+            <details>
+                <summary>How long does setup take?</summary>
+                <p>Most warehouse enter their products and shelf location in a few days, then start receiving with the system.</p>
+            </details>
+
+            <details>
+                <summary>What happens when the count and the system disagree?</summary>
+                <p>Recount the item and check recent movements before changing anything. The workflow above explains how a daily count works.</p>
+            </details>
+        </section>
+
+        <section id="demo" aria-labelledby="demo-title">
+            <h2 id="demo-title">Request a demonstration</h2>
+            <p>Tell us your warehouse and we will prepare a demo for your team. Fields marked "required" must be filled in before sending.</p>
+            
+            <form action="#" method="get" aria-label="Demo request form">
+                <fieldset>
+                    <legend>About you</legend>
+
+                    <div>
+                        <label for="name">Full name (required)</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required />
+                    </div>
+
+                    <div>
+                        <label for="email">Work email (required)</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required />
+                    </div>
+
+                    <div>
+                        <label for="Company">Company (required)</label>
+                        <input id="Company" name="Company" type="text" autocomplete="organization" required />
+                    </div>
+
+                    <div>
+                        <label for="Phone">Phone number (optional)</label>
+                        <input id="Phone" name="Phone" type="tel" autocomplete="tel" aria-describedby="phone-hint" />
+                        <small id="phone-hint">Include the country code, for example +216 12 345 678.</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your warehouse</legend>
+
+                    <div>
+                        <label for="team-size">Number of warehouse staff (required)</label>
+                        <select id="team-size" name="team-size" required>
+                            <option value="">Choose a range</option>
+                            <option value="1-10">1 to 10</option>
+                            <option value="11-50">11 to 50</option>
+                            <option value="51-200">51 to 200</option>
+                            <option value="200-plus">More than 200</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
 
 
     </main>
