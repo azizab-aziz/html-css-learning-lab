@@ -12,4 +12,4 @@ and an advanced one (structure, semantics, accessibility).
 - [05 — Semantic-tags](./05-semantic-tags)
 - [06 — Tables](./06-tables)
 - [07 — Forms-and-inputs](./07-Forms-and-inputs)
-- 08 — Mini-page *(coming soon)*
+- [08 — Mini-page](./08-Mini-page)
