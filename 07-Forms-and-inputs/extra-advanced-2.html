@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Team Survey</title>
+</head>
+<body>
+
+    <header>
+        <h1>Warehouse Team Survey</h1>
+        <p>Help us plan the break room, the team lunch, and the warehouse radio. Fields marked "required" must be filled in before sending.</p>
+    </header>
+
+    <main>
+        <form action="https://httpbin.org/get" method="get" aria-labelledby="survey-title">
+            <h2 id="survey-title">Your answer</h2>
+
+            <fieldset>
+                <legend>Contact</legend>
+
+                <div>
+                    <label for="name">Full name (required)</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+
+                <div>
+                    <label for="Phone">Phone number (required)</label>
+                    <input type="tel" name="Phone" id="Phone" autocomplete="tel-national"
+                           pattern="[0-9]{2} ?[0-9]{3} ?[0-9]{3}" title="Eight digits, spaces allowed, for example 12 345 678"
+                           placeholder="12 345 678" aria-describedby="phone-hint" required />
+                    <small id="phone-hint">Eight digits. Space are allowed.</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Break room and radio</legend>
+
+                <div>
+                    <label for="coffee">Coffee drinks the break room should stock (optional)</label>
+                    <select id="coffee" name="coffee" multiple size="9" aria-describedby="coffee-hint">
+                        <optgroup label="coffees">
+                            <option value="regular-coffee">Regular coffee</option>
+                            <option value="iced-coffee">Iced coffee</option>
+                        </optgroup>
+                        <optgroup label="Espresso drinks">
+                            <option value="latte" selected>Latte</option>
+                            <option value="cappuccino" selected>cappuccino</option>
+                            <option value="Cortado" selected>Cortado</option>
+                            <option value="americano" selected>Americano</option>
+                        </optgroup>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small id="coffee-hint">Hold Ctrl (windows) or Cmd (Mac) to choose several. Latte is chosen to start with.</small>
+                </div>
+
+                <div>
+                    <label for="usual-coffee">Your usual coffee order (optional)</label>
+                    <input id="usual-coffee" name="i=usual-coffee" type="text" list="coffee-list"
+                           autocomplete="off" aria-labelledby="usual-hint" 
+                    />
+                    <datalist id="coffee-list">
+                        <option value="coffee"></option>
+                        <option value="Latte"></option>
+                        <option value="Espresso"></option>
+                        <option value="Cortado"></option>
+                        <option value="Americano"></option>
+                    </datalist>
+                    <small id="usual-hint">Pick a suggestion or type your own.</small>
+                </div>
+
+                <div>
+                    <label for="decade">Favorite decade of music for the warehouse radio</label>
+                    <input id="decade" name="decade" type="number" min="1950" max="2026" step="10" value="1980" aria-labelledby="decade-hint" />
+                    <small id="decade-hint">Use the first year of the decade: 1950, 1960, up to 2026.</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>What should we order for the team lunch? (required)</legend>
+
+                <div>
+                    <input type="radio" name="food" id="food-tacos" value="tacos" required />
+                    <label for="food-tacos">Tacos</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="food" id="food-pizza" value="pizza" required />
+                    <label for="food-pizza">Pizza</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="food" id="food-other" value="other"  />
+                    <label for="food-other">Other</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="message">Anything else you would like to tell us?(optional)</label>
+                <textarea id="message" name="message" rows="6" cols="30" maxlength="300" aria-describedby="message-hint"></textarea>
+                <small id="message-hint">Up to 300 characters.</small>
+            </div>
+
+            <div>
+                <button type="submit">Sent (GET)</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Sent (post)</button>
+                <button type="reset">Clear form</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p><small>Created for HTML practice.</small></p>
+    </footer>
+    
+</body>
+</html>
