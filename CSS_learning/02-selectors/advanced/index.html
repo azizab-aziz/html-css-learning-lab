@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Operation Manual - Selectors (Advanced)</title>
+</head>
+<body>
+
+    <div class="page">
+
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <header>
+            <p class="brand">StockFlow operation Manual</p>
+
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a  class="menu-link" href="index.html" aria-current="page">Manual</a></li>
+                    <li><a class="menu-link" href="#receiving">Receiving</a></li>
+                    <li><a class="menu-link" href="#safety">Safety</a></li>
+                    <li><a class="menu-link button" href="#contact">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+
+            <h1>Operation Manual</h1>
+            <p>Procedures every team member follows, from the dock to the shelf.</p>
+
+            <section id="receiving">
+                <h2>Receiving Procedure</h2>
+                <p>Follow these steps for every delivery, in this order.</p>
+
+                <ol class="steps">
+                    <li>Scan the delivery barcode</li>
+                    <li>Check the quantity against the purchase order</li>
+                    <li>Inspect for damage
+                        <ul>
+                            <li>Crushed boxes</li>
+                            <li>Wet packaging</li>
+                        </ul>
+                    </li>
+                    <li>Assign a shelf Location</li>
+                </ol>
+
+                <p class="callout">Log each delivery as soon as it arrives.</p>
+            </section>
+
+            <section id="Safety">
+                <h2>Safety checklist</h2>
+                <p>Check these before every shift.</p>
+
+                <ul class="checklist">
+                    <li>Wear protective footwear</li>
+                    <li>Keep aisles clear</li>
+                    <li>Use proper lifting technique</li>
+                </ul>
+            </section>
+
+            <section id="Contact">
+                <h2>Contact</h2>
+                <p>Question about a procedure? Reach the team.</p>
+
+                <ul class="contact-list">
+                    <li><a href="mailo:contact@warehouse-lab.com">Email the warehouse team</a></li>
+                    <li><a href="tel:+21612345678">Call the warehouse office</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/web/CSS/CSS_selectors" target="_blank" rel="noopener">CSS selectors on MDN</a></li>
+                    <li><a href="index.html#receiving">Back to the receiving Procedure</a></li>
+                </ul>
+
+                <from action="#" method="get">
+                    <div>
+                        <label for="email">Email address (required)</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required >
+                    </div>
+
+                    <div>
+                        <label for="phone">phone number (optional)</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel">
+                    </div>
+
+                    <button class="button" type="submit">Send</button>
+                </from>
+            </section>
+
+        </main>
+
+        <footer>
+            <p><small>Created for CSS practice.</small></p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>

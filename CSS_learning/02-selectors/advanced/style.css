@@ -1,0 +1,41 @@
+body {
+    font-family: 65ch;
+    line-height: 1.7;
+    color: #1f2993;
+    background-color: #ffffff;
+}
+
+.page {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    color: #0b3d91;
+    line-height: 1.25;
+}
+
+h2 {
+    margin-top: 2.5rem;
+}
+
+.band {
+    font-weight: bold;
+    font-size: 1.25reml;
+    color: #0b3d91;
+}
+
+.menu > li {
+    margin-bottom:0.5rem;
+}
+
+.menu-link {
+    color: #0b57d0;
+}
+
+.menu-link[aria-current="page"] {
+  color: #1f2933;
+  font-weight: bold;
+}
